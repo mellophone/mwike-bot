@@ -4,10 +4,11 @@ import {
   SlashCommandBuilder,
 } from "discord.js";
 import { Command } from "../interfaces/Command";
+
 export const ping: Command = {
   data: new SlashCommandBuilder()
     .setName("ping")
-    .setDescription("Ping the BayouBot!")
+    .setDescription("Ping the bot.")
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
   run: async (interaction) => {
     await interaction.deferReply({ ephemeral: true });
